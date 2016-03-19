@@ -7,7 +7,7 @@ $(function() {
     scrollToBottom();
 
     var
-        socket = io('http://localhost:3000'),
+        socket = io('http://localhost:8000'),
 
         jqxhr  = $.ajax({
             url: '/users/' + user_id + '/conversations',

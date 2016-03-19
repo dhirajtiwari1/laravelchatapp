@@ -5,7 +5,7 @@ var
     fs          = require('fs'),
     redisClient = redis.createClient();
 
-app.listen(3000);
+app.listen(8000);
 
 console.log('Realtime Chat Server running at http://127.0.0.1:3000/');
 
@@ -40,7 +40,7 @@ redisClient.on('message', function(channel, message) {
     Socket.io Connection Event
 ***/
 io.on('connection', function(socket) {
-    socket.emit('welcome',  { message: 'Welcome! Realtime Chat Server running at http://127.0.0.1:3000/'} );
+    socket.emit('welcome',  { message: 'Welcome! Realtime Chat Server running at http://127.0.0.1:8000/'} );
 
     /***
         Socket.io Events
